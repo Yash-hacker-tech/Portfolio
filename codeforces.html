@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Sanghi • Codeforces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page" data-cp-page="codeforces">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>YASH SANGHI</h1>
+        <p class="subtitle">Codeforces Profile</p>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="professional.html">← Back to professional</a>
+        <a href="index.html">Splash</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>Codeforces</h3>
+        <p>
+          Stats below are loaded from <code>cp-data.json</code> (pulled from the Codeforces API). Edit that file to refresh numbers after you improve.
+        </p>
+        <p class="cp-updated"><strong>Last updated:</strong> <span data-cp-updated>--</span></p>
+        <div class="cp-refresh-row">
+          <button type="button" class="cp-refresh-btn" data-cp-refresh>Refresh now</button>
+          <span class="cp-refresh-status" data-cp-status>--</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4>Profile Summary</h4>
+            <p><strong>Handle:</strong> <span data-cp="codeforces.handle">—</span></p>
+            <p><strong>Current rating:</strong> <span data-cp="codeforces.rating">—</span></p>
+            <p><strong>Max rating:</strong> <span data-cp="codeforces.maxRating">—</span></p>
+            <p><strong>Rank:</strong> <span data-cp="codeforces.rank">—</span></p>
+            <p><strong>Max rank:</strong> <span data-cp="codeforces.maxRank">—</span></p>
+            <p><strong>Unique problems solved:</strong> <span data-cp="codeforces.problemsSolved">—</span></p>
+          </article>
+          <article class="card">
+            <h4>Contest Highlights</h4>
+            <p>Add notes about notable contests, ranks, or improvements here.</p>
+          </article>
+        </div>
+
+        <div class="cp-chart-card">
+          <h4>Rating over time</h4>
+          <p class="cp-subtitle" style="margin-bottom: 0.5rem;">Hover points to see contest names. Data matches Codeforces rated contests (update <code>cp-charts.js</code> after new contests).</p>
+          <div class="cp-chart-wrap">
+            <canvas id="cp-chart-cf" aria-label="Codeforces rating chart"></canvas>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top: 1.75rem;">
+          <a
+            class="btn"
+            href="https://codeforces.com/profile/Yash_hacker_"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open my Codeforces profile
+          </a>
+          <a
+            class="btn-ghost"
+            href="https://codeforces.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Codeforces home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> YASH SANGHI.</p>
+      <div class="footer-links">
+        <a href="professional.html">Professional</a>
+        <a href="index.html">Splash</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="cp-stats.js"></script>
+  <script src="cp-live.js"></script>
+  <script src="cp-charts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Sanghi • CodeChef</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page" data-cp-page="codechef">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>YASH SANGHI</h1>
+        <p class="subtitle">CodeChef Profile</p>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="professional.html">← Back to professional</a>
+        <a href="index.html">Splash</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>CodeChef</h3>
+        <p>
+          Stats below are loaded from <code>cp-data.json</code> (snapshot from your public CodeChef profile). Edit that file after new contests or practice.
+        </p>
+        <p class="cp-updated"><strong>Last updated:</strong> <span data-cp-updated>--</span></p>
+        <div class="cp-refresh-row">
+          <button type="button" class="cp-refresh-btn" data-cp-refresh>Refresh now</button>
+          <span class="cp-refresh-status" data-cp-status>--</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4>Profile Summary</h4>
+            <p><strong>Handle:</strong> <span data-cp="codechef.handle">—</span></p>
+            <p><strong>Rating:</strong> <span data-cp="codechef.rating">—</span></p>
+            <p><strong>Problems solved:</strong> <span data-cp="codechef.problemsSolved">—</span></p>
+            <p><strong>Stars:</strong> <span data-cp="codechef.stars" data-cp-suffix="★">—</span></p>
+            <p><strong>Contests participated:</strong> <span data-cp="codechef.contestsParticipated">—</span></p>
+          </article>
+          <article class="card">
+            <h4>Contest Highlights</h4>
+            <p>Add notes about Long Challenges, Cook‑Offs, Lunchtimes, and notable performances.</p>
+          </article>
+        </div>
+
+        <div class="hero-actions" style="margin-top: 1.75rem;">
+          <a
+            class="btn"
+            href="https://www.codechef.com/users/merry_frost_25"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open my CodeChef profile
+          </a>
+          <a
+            class="btn-ghost"
+            href="https://www.codechef.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CodeChef home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> YASH SANGHI.</p>
+      <div class="footer-links">
+        <a href="professional.html">Professional</a>
+        <a href="index.html">Splash</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="cp-stats.js"></script>
+  <script src="cp-live.js"></script>
+  <script src="cp-charts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

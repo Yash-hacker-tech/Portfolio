@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Sanghi • LeetCode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page" data-cp-page="leetcode">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>YASH SANGHI</h1>
+        <p class="subtitle">LeetCode Profile</p>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="professional.html">← Back to professional</a>
+        <a href="index.html">Splash</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h3>LeetCode</h3>
+        <p>
+          Stats below are loaded from <code>cp-data.json</code> (sourced from public LeetCode stats APIs). Edit that file to update after new solves.
+        </p>
+        <p class="cp-updated"><strong>Last updated:</strong> <span data-cp-updated>--</span></p>
+        <div class="cp-refresh-row">
+          <button type="button" class="cp-refresh-btn" data-cp-refresh>Refresh now</button>
+          <span class="cp-refresh-status" data-cp-status>--</span>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h4>Profile Summary</h4>
+            <p><strong>Username:</strong> <span data-cp="leetcode.username">—</span></p>
+            <p><strong>Total solved:</strong> <span data-cp="leetcode.totalSolved">—</span></p>
+            <p><strong>Easy / Medium / Hard:</strong>
+              <span data-cp="leetcode.easySolved">—</span> /
+              <span data-cp="leetcode.mediumSolved">—</span> /
+              <span data-cp="leetcode.hardSolved">—</span>
+            </p>
+            <p><strong>Contest rating:</strong> <span data-cp="leetcode.contestRating">—</span></p>
+            <p><strong>Contests attended:</strong> <span data-cp="leetcode.contestAttend">—</span></p>
+            <p><strong>Global ranking:</strong> <span data-cp="leetcode.globalRanking">—</span></p>
+          </article>
+          <article class="card">
+            <h4>Focus Areas</h4>
+            <p>List topics you focus on (e.g., arrays, DP, graphs, trees, interview prep).</p>
+          </article>
+        </div>
+
+        <div class="cp-chart-card">
+          <h4>Difficulty breakdown</h4>
+          <p class="cp-subtitle" style="margin-bottom: 0.5rem;">Solved counts by difficulty — update numbers in <code>cp-charts.js</code> when you solve more.</p>
+          <div class="cp-chart-wrap">
+            <canvas id="cp-chart-lc" aria-label="LeetCode problems by difficulty"></canvas>
+          </div>
+        </div>
+
+        <div class="hero-actions" style="margin-top: 1.75rem;">
+          <a
+            class="btn"
+            href="https://leetcode.com/u/Yash-hacker-tech/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open my LeetCode profile
+          </a>
+          <a
+            class="btn-ghost"
+            href="https://leetcode.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LeetCode home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> YASH SANGHI.</p>
+      <div class="footer-links">
+        <a href="professional.html">Professional</a>
+        <a href="index.html">Splash</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="cp-stats.js"></script>
+  <script src="cp-live.js"></script>
+  <script src="cp-charts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

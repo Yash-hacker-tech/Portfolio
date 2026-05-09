@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yash Sanghi • Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>YASH SANGHI</h1>
+        <p class="subtitle">Professional Portfolio</p>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Back to choice</a>
+        <a href="personal.html">Personal</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-admin" aria-label="Site tools">
+        <a class="btn-ghost header-contact-btn" href="#contact">Contact</a>
+        <div id="adminGuest">
+          <button type="button" class="btn-ghost" id="adminLoginToggle">Admin login</button>
+        </div>
+        <div id="adminAuth" class="hidden admin-auth-badges">
+          <span class="admin-badge">Edit mode</span>
+          <button type="button" class="btn-ghost admin-sm" id="adminLogout">Log out</button>
+          <button type="button" class="btn-ghost admin-sm" id="adminChangePwd">Change password</button>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="adminLoginPanel" class="admin-login-panel hidden" aria-hidden="true">
+    <div class="container admin-login-inner">
+      <p class="admin-login-title">Admin sign-in</p>
+      <label class="admin-field admin-login-pass">
+        <span>Password</span>
+        <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Enter password" />
+      </label>
+      <div class="admin-login-actions">
+        <button type="button" class="btn" id="adminDoLogin">Log in</button>
+        <button type="button" class="btn-ghost" id="adminCancelLogin">Cancel</button>
+      </div>
+      <p class="admin-login-note">Session clears when you refresh the page — log in again to edit.</p>
+    </div>
+  </div>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Full‑Stack Web Developer • B.Tech</p>
+          <h2>Turning ideas into polished web experiences.</h2>
+          <p>
+            I’m Yash, a B.Tech student who enjoys designing and building
+            responsive, performant web applications with modern JavaScript
+            tooling and clean, maintainable code.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn-ghost" href="#contact">Let’s work together</a>
+          </div>
+          <div class="hero-meta">
+            <span>Open to internships & freelance</span>
+            <span>Based in India • Available remotely</span>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <div class="avatar">
+            <span>YS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h3>About Me</h3>
+        <p>
+          I’m a B.Tech student passionate about building scalable web
+          applications, learning modern frameworks, and bringing ideas to life
+          with clean code. I enjoy solving real‑world problems, contributing to
+          open source, and constantly improving my skills.
+        </p>
+        <div class="about-layout">
+          <div class="about-timeline">
+            <div class="timeline-item">
+              <span class="timeline-label">2022 — Present</span>
+              <h4>B.Tech in Computer Science</h4>
+              <p>Strengthening my foundations in data structures, algorithms, and software engineering.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">Recent Focus</span>
+              <h4>Modern Web Development</h4>
+              <p>Building projects with React, Node.js, and REST APIs while sharpening my UI/UX eye.</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <h4>What I enjoy at work</h4>
+              <p>Crafting clean interfaces, solving tricky bugs, and collaborating with others to ship features.</p>
+            </div>
+            <div class="card">
+              <h4>What I’m looking for</h4>
+              <p>Internships, freelance opportunities, and projects where I can grow as a full‑stack engineer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h3>Skills</h3>
+        <p>A quick overview of the technologies, tools, and core concepts I work with.</p>
+        <div class="skill-grid">
+          <div class="skill">
+            <h4>Programming Languages</h4>
+            <div class="pill-row">
+              <span class="pill">C</span>
+              <span class="pill">C++</span>
+              <span class="pill">Java</span>
+              <span class="pill">Python</span>
+              <span class="pill">R</span>
+              <span class="pill">Oracle SQL</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Frameworks &amp; Tools</h4>
+            <div class="pill-row">
+              <span class="pill">React</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Tailwind CSS</span>
+              <span class="pill">Git</span>
+              <span class="pill">Linux</span>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Core Concepts</h4>
+            <div class="pill-row">
+              <span class="pill">Data Structures</span>
+              <span class="pill">Algorithms</span>
+              <span class="pill">Graph Theory</span>
+              <span class="pill">Dynamic Programming</span>
+              <span class="pill">Object‑Oriented Programming</span>
+              <span class="pill">System Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-block">
+          <h4>Competitive Programming</h4>
+          <p class="cp-subtitle">
+            I regularly practice data structures and algorithms on online judges to sharpen my problem‑solving skills.
+          </p>
+          <p class="cp-updated"><strong>Last updated:</strong> <span data-cp-updated>--</span></p>
+          <div class="cp-refresh-row">
+            <button type="button" class="cp-refresh-btn" data-cp-refresh>Refresh now</button>
+            <span class="cp-refresh-status" data-cp-status>--</span>
+          </div>
+          <div class="cp-grid">
+            <article class="cp-card">
+              <div class="cp-header">
+                <h5>Codeforces</h5>
+                <span class="pill">Yash_hacker_</span>
+              </div>
+              <ul>
+                <li><strong>Rating:</strong> <span data-cp="codeforces.rating">—</span></li>
+                <li><strong>Max rating:</strong> <span data-cp="codeforces.maxRating">—</span></li>
+                <li><strong>Problems solved:</strong> <span data-cp="codeforces.problemsSolved">—</span></li>
+                <li><strong>Rank:</strong> <span data-cp="codeforces.rank">—</span></li>
+              </ul>
+              <a href="codeforces.html" class="project-link">View Codeforces details</a>
+            </article>
+            <article class="cp-card">
+              <div class="cp-header">
+                <h5>LeetCode</h5>
+                <span class="pill">Yash-hacker-tech</span>
+              </div>
+              <ul>
+                <li><strong>Problems solved:</strong> <span data-cp="leetcode.totalSolved">—</span></li>
+                <li><strong>Contest rating:</strong> <span data-cp="leetcode.contestRating">—</span></li>
+                <li><strong>Contests attended:</strong> <span data-cp="leetcode.contestAttend">—</span></li>
+                <li><strong>Global ranking:</strong> <span data-cp="leetcode.globalRanking">—</span></li>
+              </ul>
+              <a href="leetcode.html" class="project-link">View LeetCode details</a>
+            </article>
+            <article class="cp-card">
+              <div class="cp-header">
+                <h5>HackerRank</h5>
+                <span class="pill">y_sanghi2007</span>
+              </div>
+              <ul>
+                <li><strong>Level:</strong> <span data-cp="hackerrank.level">—</span></li>
+                <li><strong>Title:</strong> <span data-cp="hackerrank.title">—</span></li>
+              </ul>
+              <a href="hackerrank.html" class="project-link">View HackerRank details</a>
+            </article>
+            <article class="cp-card">
+              <div class="cp-header">
+                <h5>CodeChef</h5>
+                <span class="pill">merry_frost_25</span>
+              </div>
+              <ul>
+                <li><strong>Rating:</strong> <span data-cp="codechef.rating">—</span></li>
+                <li><strong>Problems solved:</strong> <span data-cp="codechef.problemsSolved">—</span></li>
+                <li><strong>Stars:</strong> <span data-cp="codechef.stars" data-cp-suffix="★">—</span></li>
+                <li><strong>Contests:</strong> <span data-cp="codechef.contestsParticipated">—</span></li>
+              </ul>
+              <a href="codechef.html" class="project-link">View CodeChef details</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head-row">
+          <div>
+            <h3>Projects</h3>
+            <p>A selection of recent work and practice projects. I’m always experimenting and shipping new things.</p>
+          </div>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+        <div id="projectsAdminPanel" class="admin-projects-panel hidden" aria-live="polite"></div>
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h3>Contact</h3>
+        <p>Interested in collaborating, hiring, or just saying hi? Send a message and I’ll get back to you soon.</p>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required placeholder="Hi, I would like to ..."></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> YASH SANGHI. Built with HTML, CSS &amp; JavaScript.</p>
+      <div class="footer-links">
+        <a href="personal.html">Personal</a>
+        <a href="index.html">Back to choice</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="adminPwdModal" class="admin-modal hidden" aria-hidden="true" role="dialog" aria-labelledby="adminPwdTitle">
+    <div class="admin-modal-backdrop" id="pwdBackdrop"></div>
+    <div class="admin-modal-card card">
+      <h4 id="adminPwdTitle">Change password</h4>
+      <label class="admin-field"><span>Current password</span><input type="password" id="pwdOld" autocomplete="current-password" /></label>
+      <label class="admin-field"><span>New password</span><input type="password" id="pwdNew" autocomplete="new-password" /></label>
+      <label class="admin-field"><span>Confirm new password</span><input type="password" id="pwdConfirm" autocomplete="new-password" /></label>
+      <div class="admin-modal-actions">
+        <button type="button" class="btn" id="pwdSave">Save password</button>
+        <button type="button" class="btn-ghost" id="pwdClose">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="cp-stats.js"></script>
+  <script src="cp-live.js"></script>
+  <script src="admin.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

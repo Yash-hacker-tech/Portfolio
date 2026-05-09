@@ -1,0 +1,40 @@
+{
+  "fetchedAt": "2026-03-23",
+  "sources": {
+    "codeforces": "https://codeforces.com/api/user.info + user.status",
+    "leetcode": "https://alfa-leetcode-api.onrender.com",
+    "hackerrank": "https://www.hackerrank.com/rest/contests/master/hackers/.../profile",
+    "codechef": "https://www.codechef.com/users/merry_frost_25 (page snapshot)"
+  },
+  "codeforces": {
+    "handle": "Yash_hacker_",
+    "rating": 1170,
+    "maxRating": 1190,
+    "rank": "newbie",
+    "maxRank": "newbie",
+    "problemsSolved": 100
+  },
+  "leetcode": {
+    "username": "Yash-hacker-tech",
+    "totalSolved": 119,
+    "easySolved": 70,
+    "mediumSolved": 45,
+    "hardSolved": 4,
+    "contestRating": 1415.31,
+    "contestAttend": 1,
+    "globalRanking": 1289034
+  },
+  "hackerrank": {
+    "username": "y_sanghi2007",
+    "level": 5,
+    "title": "O(2^N)",
+    "note": "HackerRank level / title from public profile API"
+  },
+  "codechef": {
+    "handle": "merry_frost_25",
+    "rating": 1276,
+    "problemsSolved": 39,
+    "stars": 1,
+    "contestsParticipated": 1
+  }
+}
