@@ -27,6 +27,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-admin" aria-label="Site tools">
+        <button type="button" class="btn-ghost theme-toggle" data-theme-toggle aria-label="Toggle dark mode">Dark mode</button>
         <a class="btn-ghost header-contact-btn" href="#contact">Contact</a>
         <div id="adminGuest">
           <button type="button" class="btn-ghost" id="adminLoginToggle">Admin login</button>
@@ -44,21 +45,6 @@
       </button>
     </div>
   </header>
-
-  <div id="adminLoginPanel" class="admin-login-panel hidden" aria-hidden="true">
-    <div class="container admin-login-inner">
-      <p class="admin-login-title">Admin sign-in</p>
-      <label class="admin-field admin-login-pass">
-        <span>Password</span>
-        <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Enter password" />
-      </label>
-      <div class="admin-login-actions">
-        <button type="button" class="btn" id="adminDoLogin">Log in</button>
-        <button type="button" class="btn-ghost" id="adminCancelLogin">Cancel</button>
-      </div>
-      <p class="admin-login-note">Session clears when you refresh the page — log in again to edit.</p>
-    </div>
-  </div>
 
   <main>
     <section id="hero" class="hero">
@@ -292,6 +278,24 @@
         <button type="button" class="btn" id="pwdSave">Save password</button>
         <button type="button" class="btn-ghost" id="pwdClose">Close</button>
       </div>
+    </div>
+  </div>
+
+  <div id="adminSplashModal" class="admin-splash hidden" aria-hidden="true" role="dialog" aria-labelledby="adminSplashTitle">
+    <div class="admin-splash-backdrop" id="adminSplashBackdrop"></div>
+    <div class="admin-splash-card">
+      <p class="admin-splash-kicker">Secure admin access</p>
+      <h4 id="adminSplashTitle">Welcome back, Yash</h4>
+      <p class="admin-splash-copy">Sign in to unlock project editing, featured badges, and live updates.</p>
+      <label class="admin-field">
+        <span>Password</span>
+        <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Enter admin password" />
+      </label>
+      <div class="admin-login-actions">
+        <button type="button" class="btn" id="adminDoLogin">Unlock editor</button>
+        <button type="button" class="btn-ghost" id="adminCancelLogin">Cancel</button>
+      </div>
+      <p class="admin-login-note">Session auto-logs out on refresh for safety.</p>
     </div>
   </div>
 

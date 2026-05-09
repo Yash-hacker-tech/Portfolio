@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const THEME_KEY = 'portfolio_theme_v1';
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('theme-dark', isDark);
+    document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+      btn.textContent = isDark ? 'Light mode' : 'Dark mode';
+      btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+  }
+
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+  document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = document.body.classList.contains('theme-dark') ? 'light' : 'dark';
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    });
+  });
+
   // Page enter animation
   const body = document.body;
   if (body.classList.contains('page')) {

@@ -312,7 +312,7 @@
   function updateAdminBarUI() {
     var guest = document.getElementById('adminGuest');
     var auth = document.getElementById('adminAuth');
-    var loginPanel = document.getElementById('adminLoginPanel');
+    var loginPanel = document.getElementById('adminSplashModal');
     if (!guest || !auth) return;
     if (sessionActive) {
       guest.classList.add('hidden');
@@ -346,9 +346,9 @@
     ensureDefaultPassword().then(function () {
       renderProjectGrid();
     });
-
     var btnToggle = document.getElementById('adminLoginToggle');
-    var loginPanel = document.getElementById('adminLoginPanel');
+    var loginPanel = document.getElementById('adminSplashModal');
+    var loginBackdrop = document.getElementById('adminSplashBackdrop');
     var pwInput = document.getElementById('adminPassword');
     var btnDoLogin = document.getElementById('adminDoLogin');
     var btnCancelLogin = document.getElementById('adminCancelLogin');
@@ -357,13 +357,22 @@
 
     if (btnToggle && loginPanel) {
       btnToggle.addEventListener('click', function () {
-        loginPanel.classList.toggle('hidden');
+        loginPanel.classList.remove('hidden');
+        loginPanel.setAttribute('aria-hidden', 'false');
+        if (pwInput) pwInput.focus();
       });
     }
     if (btnCancelLogin && loginPanel) {
       btnCancelLogin.addEventListener('click', function () {
         loginPanel.classList.add('hidden');
+        loginPanel.setAttribute('aria-hidden', 'true');
         if (pwInput) pwInput.value = '';
+      });
+    }
+    if (loginBackdrop && loginPanel) {
+      loginBackdrop.addEventListener('click', function () {
+        loginPanel.classList.add('hidden');
+        loginPanel.setAttribute('aria-hidden', 'true');
       });
     }
 
@@ -375,7 +384,10 @@
             if (hash === stored) {
               sessionActive = true;
               pwInput.value = '';
-              if (loginPanel) loginPanel.classList.add('hidden');
+              if (loginPanel) {
+                loginPanel.classList.add('hidden');
+                loginPanel.setAttribute('aria-hidden', 'true');
+              }
               updateAdminBarUI();
               renderProjectGrid();
             } else {

@@ -34,6 +34,7 @@ body,
 
 .splash-body {
   min-height: 100vh;
+  position: relative;
 }
 
 a {
@@ -114,6 +115,13 @@ textarea {
 
 .splash-btn {
   margin-top: 0.25rem;
+}
+
+.splash-theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 35;
 }
 
 /* --- Header --- */
@@ -784,6 +792,10 @@ textarea {
   font-size: 0.82rem !important;
 }
 
+.theme-toggle {
+  min-width: 110px;
+}
+
 .admin-login-panel {
   background: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
@@ -940,4 +952,187 @@ textarea {
   gap: 0.5rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
+}
+
+/* --- Admin splash login --- */
+.admin-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.admin-splash-backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.35), transparent 42%),
+    radial-gradient(circle at 82% 75%, rgba(147, 51, 234, 0.28), transparent 45%),
+    rgba(2, 6, 23, 0.78);
+  backdrop-filter: blur(7px);
+}
+
+.admin-splash-card {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 94vw);
+  border-radius: 20px;
+  padding: 1.4rem 1.3rem;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(239, 246, 255, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.34), 0 0 0 1px rgba(37, 99, 235, 0.12);
+}
+
+.admin-splash-kicker {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+}
+
+.admin-splash-card h4 {
+  font-size: 1.45rem;
+  margin-bottom: 0.42rem;
+}
+
+.admin-splash-copy {
+  margin-bottom: 0.95rem;
+  color: rgba(15, 23, 42, 0.72);
+}
+
+/* --- Dark mode + glow aesthetics --- */
+.theme-dark {
+  color: #dbeafe;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(30, 64, 175, 0.55), transparent 42%),
+    radial-gradient(circle at 80% 10%, rgba(147, 51, 234, 0.32), transparent 35%),
+    radial-gradient(circle at 50% 100%, rgba(15, 118, 110, 0.3), transparent 38%),
+    #030712;
+}
+
+.theme-dark .site-header {
+  background: rgba(2, 6, 23, 0.88);
+  border-bottom-color: rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.theme-dark .subtitle,
+.theme-dark .section p,
+.theme-dark .hero p,
+.theme-dark .hero-meta,
+.theme-dark .form-status,
+.theme-dark .admin-editor-hint,
+.theme-dark .cp-refresh-status,
+.theme-dark .cp-updated {
+  color: rgba(203, 213, 225, 0.82);
+}
+
+.theme-dark .nav a:hover,
+.theme-dark .hero-meta span,
+.theme-dark .timeline-label,
+.theme-dark .project-meta span {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.theme-dark .btn {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.35);
+}
+
+.theme-dark .btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+}
+
+.theme-dark .btn-ghost,
+.theme-dark .cp-refresh-btn {
+  background: rgba(15, 23, 42, 0.74);
+  color: #bfdbfe;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.theme-dark .btn-ghost:hover,
+.theme-dark .cp-refresh-btn:hover {
+  background: rgba(30, 41, 59, 0.92);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.26);
+}
+
+.theme-dark .card,
+.theme-dark .project,
+.theme-dark .cp-card,
+.theme-dark .cp-chart-card,
+.theme-dark .skill,
+.theme-dark .admin-modal-card,
+.theme-dark .admin-splash-card {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(96, 165, 250, 0.24);
+  box-shadow: 0 12px 34px rgba(2, 6, 23, 0.5), 0 0 22px rgba(37, 99, 235, 0.15);
+}
+
+.theme-dark .pill {
+  background: rgba(30, 41, 59, 0.84);
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #dbeafe;
+}
+
+.theme-dark .project-link,
+.theme-dark .cp-card a {
+  color: #93c5fd;
+}
+
+.theme-dark .project-link:hover,
+.theme-dark .cp-card a:hover {
+  color: #bfdbfe;
+}
+
+.theme-dark .admin-field input,
+.theme-dark .admin-field textarea,
+.theme-dark .contact-form input,
+.theme-dark .contact-form textarea {
+  background: rgba(2, 6, 23, 0.9);
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+.theme-dark .section-alt,
+.theme-dark .site-footer {
+  background: rgba(2, 6, 23, 0.55);
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+.theme-dark .footer-links a {
+  color: #cbd5e1;
+}
+
+.theme-dark .footer-links a:hover {
+  color: #e2e8f0;
+}
+
+.theme-dark .menu-toggle span {
+  background: #e2e8f0;
+}
+
+.theme-dark .splash-panel--left {
+  background: radial-gradient(circle at top left, #0f172a 0, #1e1b4b 45%, #020617 100%);
+}
+
+.theme-dark .splash-panel--right {
+  background: radial-gradient(circle at top right, #0b1120 0, #1d4ed8 35%, #020617 100%);
+}
+
+.theme-dark .splash-text {
+  color: rgba(226, 232, 240, 0.84);
+}
+
+.theme-dark .splash-eyebrow {
+  background: rgba(148, 163, 184, 0.16);
+  color: #bfdbfe;
 }
